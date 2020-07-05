@@ -1,0 +1,34 @@
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\bin\Debug\netcoreapp2.1\Task 6.deps.json
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\bin\Debug\netcoreapp2.1\Task 6.runtimeconfig.json
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\bin\Debug\netcoreapp2.1\Task 6.runtimeconfig.dev.json
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\bin\Debug\netcoreapp2.1\Task 6.dll
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\obj\Debug\netcoreapp2.1\Task 6.csprojAssemblyReference.cache
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\obj\Debug\netcoreapp2.1\Task 6.csproj.CoreCompileInputs.cache
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\obj\Debug\netcoreapp2.1\Task 6.RazorAssemblyInfo.cache
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\obj\Debug\netcoreapp2.1\Task 6.RazorAssemblyInfo.cs
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\obj\Debug\netcoreapp2.1\Task 6.AssemblyInfoInputs.cache
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\obj\Debug\netcoreapp2.1\Task 6.AssemblyInfo.cs
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\obj\Debug\netcoreapp2.1\Task 6.TagHelpers.input.cache
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\obj\Debug\netcoreapp2.1\Task 6.TagHelpers.output.cache
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\obj\Debug\netcoreapp2.1\Task 6.RazorCoreGenerate.cache
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\obj\Debug\netcoreapp2.1\Task 6.RazorTargetAssemblyInfo.cache
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\obj\Debug\netcoreapp2.1\Task 6.RazorTargetAssemblyInfo.cs
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\bin\Debug\netcoreapp2.1\Task 6.pdb
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\bin\Debug\netcoreapp2.1\Task 6.Views.dll
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\bin\Debug\netcoreapp2.1\Task 6.Views.pdb
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\obj\Debug\netcoreapp2.1\Task 6.Views.pdb
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\obj\Debug\netcoreapp2.1\Task 6.dll
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\obj\Debug\netcoreapp2.1\Task 6.pdb
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\obj\Debug\netcoreapp2.1\Task 6.csproj.CopyComplete
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\obj\Debug\netcoreapp2.1\Razor\Views\Home\SubscribeResult.g.cshtml.cs
+C:\Users\Brian Chong\Desktop\SP Year 3\CSC\Assignment 1\Task 6\Task 6\obj\Debug\netcoreapp2.1\Razor\Views\Home\pauseResult.g.cshtml.cs

@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Stripe Payment</title>
+</head>
+<body>
+    @*https://blog.elmah.io/paid-subscriptions-with-asp-net-core-and-stripe-billing/*@
+    <form asp-controller="Home" asp-action="Subscribe" method="post" id="payment-form" style="width:100%;">
+        <div class="container">
+            <div class="form-row">
+                <label id="cardLabel" for="card-element">
+                    Credit or debit card
+                </label>
+                <div id="card-element" style="width:100%;">
+                    <!-- A Stripe Element will be inserted here. -->
+                </div>
+
+                <!-- Used to display form errors. -->
+                <div id="card-errors" role="alert"></div>
+            </div>
+            <div class="form-row">
+                <label id="emailLabel" for="email">
+                    Email
+                </label>
+                <div style="width:100%;">
+                    <input name="email" id="email" />
+                </div>
+            </div>
+            <div class="form-row">
+                <label id="planLabel" for="plan">
+                    Plan
+                </label>
+                <div style="width:100%;">
+                    <input type="radio" name="plan" id="basicPlan" value="Basic Plan" /><label for="planMonthly">Basic Plan</label><br />
+                    <input type="radio" name="plan" id="standardPlan" value="Standard Plan" /><label for="planYearly">Standard Plan</label><br />
+                    <input type="radio" name="plan" id="premiumPlan" value="Premium Plan" /><label for="planYearly">Premium Plan</label>
+                </div>
+            </div>
+            <button class="btn-default" id="makeSubscriptionBtn">Make Subscription</button>
+        </div>
+    </form>
+
+    <div class="pauseRow">
+        <form asp-controller="Home" id="switchForm" asp-action="TogglePause" method="post">
+            <div class="custom-control custom-switch">
+                <input type="radio" name="togglePause" id="pauseRadio" value="pause" /><label for="planYearly">Pause</label>
+                <input type="radio" name="togglePause" id="resumeRadio" value="resume" /><label for="planYearly">Resume</label>
+                <button type="submit" class="btn-default" id="confirmBtn">Confirm</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="refundRow">
+        <form asp-controller="Home" id="refundForm" asp-action="Refund" method="post">
+            <div class="custom-control custom-switch">
+                <input type="radio" name="toggleRefund" id="refundRadio" value="refund" /><label for="planYearly">Refund</label>
+                <input type="radio" name="toggleRefund" id="cancelRefundRadio" value="cancelRefund" /><label for="planYearly">Cancel refund</label>
+                <button type="submit" class="btn-default" id="confirmRefundBtn">Confirm</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="manageRow">
+        <form method="POST" action="/Home/CreateSession">
+            <button class="btn-default" id="manageBillBtn" type="submit">Manage billing</button>
+        </form>
+    </div>
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+
+        // Create a Stripe client and use the Viewbag to get your Stripe API key.
+        //var stripe = Stripe('@ViewBag.stripeKey');
+        var stripe = Stripe('pk_test_51Gzaa1HAh8lBnQxzdxo2zIn3mzr0lkJiQcsQowOZSd1S85Sou79t2Ub8OwI1lkGcAcgHYxJeB3wIhmFimN9DdKnD00BesCjDg3');
+
+        // Create an instance of Elements.
+        var elements = stripe.elements();
+
+        // Custom styling can be passed to options when creating an Element.
+        // (Note that this demo uses a wider set of styles than the guide below.)
+        var style = {
+        base: {
+            color: '#32325d',
+            fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+            fontSmoothing: 'antialiased',
+            fontSize: '16px',
+            '::placeholder': {
+            color: '#aab7c4'
+            }
+        },
+        invalid: {
+            color: '#fa755a',
+            iconColor: '#fa755a'
+        }
+        };
+
+        // Create an instance of the card Element.
+        var card = elements.create('card', {style: style});
+
+        // Add an instance of the card Element into the `card-element` <div>.
+        card.mount('#card-element');
+
+        // Handle real-time validation errors from the card Element.
+        card.addEventListener('change', function(event) {
+        var displayError = document.getElementById('card-errors');
+        if (event.error) {
+            displayError.textContent = event.error.message;
+        } else {
+            displayError.textContent = '';
+        }
+        });
+
+        // Handle form submission.
+        var form = document.getElementById('payment-form');
+        form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        stripe.createToken(card).then(function(result) {
+            if (result.error) {
+            // Inform the user if there was an error.
+            var errorElement = document.getElementById('card-errors');
+            errorElement.textContent = result.error.message;
+            } else {
+            // Send the token to your server.
+            stripeTokenHandler(result.token);
+            }
+        });
+        });
+
+        // Submit the form with the token ID.
+        function stripeTokenHandler(token) {
+            // Insert the token ID into the form so it gets submitted to the server
+            var form = document.getElementById('payment-form');
+            var hiddenInput = document.createElement('input');
+            hiddenInput.setAttribute('type', 'hidden');
+            hiddenInput.setAttribute('name', 'stripeToken');
+            hiddenInput.setAttribute('value', token.id);
+            form.appendChild(hiddenInput);
+
+            // Submit the form
+            form.submit();
+        }
+        var switchName = document.getElementById('customSwitch1');
+        var confirmBtn = document.getElementById('confirmBtn');
+
+        //confirmBtn.onclick = function () {
+        //    var switchVal = switchName.checked;
+        //    var formName = document.getElementById("switchForm");
+        //    formName.submit();
+        //}
+
+    </script>
+</body>
+</html>
+
+<style>
+    .form-row, .pauseRow, .manageRow, .refundRow {
+        margin: 8px;
+    }
+
+    #makeSubscriptionBtn{
+        color: white;
+        background-color: forestgreen;
+        border: none;
+        padding: 5px 8px;
+        border-radius: 5px;
+    }
+
+    #confirmBtn, #confirmRefundBtn {
+        color: white;
+        background-color: darkorange;
+        border: none;
+        padding: 5px 8px;
+        border-radius: 5px;
+    }
+
+    #manageBillBtn {
+        color: white;
+        background-color: mediumpurple;
+        border: none;
+        padding: 5px 8px;
+        border-radius: 5px;
+    }
+
+    #cardLabel, #emailLabel, #planLabel {
+        margin: 0;
+        font-weight: bold;
+    }
+
+    label {
+        margin: 0 5px;
+        font-weight: 100;
+    }
+</style>

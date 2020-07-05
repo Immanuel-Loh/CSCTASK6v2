@@ -1,0 +1,13 @@
+﻿<div id="statusResult"></div>
+<a href="https://localhost:44318/">Back to home</a>
+
+<script>
+    var res = document.getElementById('statusResult');
+    
+    var msg = @ViewBag.message;
+    if (msg == "Subscription paused") {
+        res.textContent("Subscription paused");
+    } else {
+        res.textContent("Subscription resumed");
+    }
+</script>
